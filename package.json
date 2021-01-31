@@ -1,0 +1,23 @@
+{
+  "name": "@puckit/boilerplate",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "puckit-scripts start",
+    "start:app": "puckit-scripts start:app",
+    "start:server": "puckit-scripts start:server"
+  },
+  "dependencies": {
+    "@puckit/dev-utils": "0.1.2",
+    "@puckit/scripts": "0.1.2",
+    "fastify": "^3.11.0",
+    "node-fetch": "^3.0.0-beta.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "4.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0"
+  }
+}
