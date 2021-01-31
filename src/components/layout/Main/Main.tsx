@@ -1,10 +1,11 @@
-import React, { FC, useContext } from 'react'
+/** @jsx jsx */
+import { FC, useContext } from 'react'
+import { jsx } from '@emotion/react'
 
 import { ServerSidePropsContext } from '../../../components/services/ServerSidePropsProvider'
 import { Header } from '../Header'
-import { MainServerSideProps } from './Main.types'
-
-import s from './Main.module.scss'
+import { MainServerSideProps } from './types'
+import s from './styles'
 
 export const getServerSideProps = async (): Promise<MainServerSideProps> => {
   const res = await fetch('http://localhost:8000/api/data', { method: 'POST' })
@@ -16,10 +17,10 @@ const Main: FC = () => {
   const { serverSideMsg } = useContext<MainServerSideProps>(ServerSidePropsContext)
 
   return (
-    <div className={s.wrapper}>
+    <div css={s.wrapperStyles}>
       <Header />
       <main>
-        <p className={s.title}>{serverSideMsg}</p>
+        <p css={s.titleStyles}>{serverSideMsg}</p>
       </main>
     </div>
   )

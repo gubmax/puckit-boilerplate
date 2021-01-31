@@ -1,10 +1,12 @@
-import React, { FC } from 'react'
+/** @jsx jsx */
+import { FC } from 'react'
+import { jsx } from '@emotion/react'
 
-import s from './Header.module.scss'
+import s from './styles'
 
 const Header: FC = () => {
   return (
-    <div className={s.wrapper}>Puckit</div>
+    <div css={s.wrapper}>Puckit</div>
   )
 }
 
