@@ -6,7 +6,7 @@ import s from './styles'
 
 const Header: FC = () => {
   return (
-    <div css={s.wrapper}>Puckit</div>
+    <div css={s.wrapper}>Puckit Boilerplate</div>
   )
 }
 

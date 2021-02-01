@@ -1,7 +1,14 @@
 {
   "name": "@puckit/boilerplate",
   "version": "0.1.0",
+  "description": "Boilerplate for starting isomorphic React web app",
+  "homepage": "https://github.com/gubmax/puckit-boilerplate#readme",
   "license": "MIT",
+  "author": "Maksim Gubyshev <gubyshev@gmail.com> (https://github.com/gubmax)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gubmax/puckit-boilerplate.git"
+  },
   "scripts": {
     "start": "puckit-scripts start",
     "start:app": "puckit-scripts start:app",
