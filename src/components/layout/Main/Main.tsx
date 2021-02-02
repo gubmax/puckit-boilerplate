@@ -1,10 +1,11 @@
 /** @jsx jsx */
-import { FC, useContext } from 'react'
+import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
-import { ServerSidePropsContext } from '../../../components/services/ServerSidePropsProvider'
 import { Header } from '../Header'
 import { MainServerSideProps } from './types'
+import { Sidebar } from '../Sidebar'
+import { useServerSideProps } from '../../../hooks'
 import s from './styles'
 
 export const getServerSideProps = async (): Promise<MainServerSideProps> => {
@@ -14,14 +15,17 @@ export const getServerSideProps = async (): Promise<MainServerSideProps> => {
 }
 
 const Main: FC = () => {
-  const { serverSideMsg } = useContext<MainServerSideProps>(ServerSidePropsContext)
+  const { serverSideMsg } = useServerSideProps<MainServerSideProps>()
 
   return (
-    <div css={s.wrapperStyles}>
-      <Header />
-      <main>
-        <p css={s.titleStyles}>{serverSideMsg}</p>
-      </main>
+    <div css={s.wrapper}>
+      <Sidebar />
+      <div css={s.main}>
+        <Header />
+        <main>
+          <p css={s.title}>{serverSideMsg}</p>
+        </main>
+      </div>
     </div>
   )
 }

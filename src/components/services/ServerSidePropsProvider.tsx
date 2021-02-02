@@ -1,6 +1,6 @@
 import React, { createContext, FC } from 'react'
 
-export type ServerSideProps = object
+export type ServerSideProps = any
 
 type SSPProviderProps = {
   value: ServerSideProps,

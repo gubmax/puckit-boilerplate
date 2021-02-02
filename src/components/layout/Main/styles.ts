@@ -1,14 +1,19 @@
-import { css } from "@emotion/react"
+import { css } from '@emotion/react'
 
 const styles = {
-  wrapperStyles: css`
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 16px;
+  wrapper: css`
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-areas: "aside main";
+    min-height: 100vh;
   `,
-  titleStyles: css`
-    font-size: 20px;
-  `
+  main: css`
+    grid-area: main;
+    padding: 20px;
+  `,
+  title: css`
+    font-size: 16px;
+  `,
 }
 
 export default styles

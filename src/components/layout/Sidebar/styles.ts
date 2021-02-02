@@ -2,9 +2,13 @@ import { css } from '@emotion/react'
 
 const styles = {
   wrapper: css`
-    margin-bottom: 20px;
+    grid-area: aside;
+    padding: 20px;
+    background: var(--color-dark);
+  `,
+  title: css`
     font-size: 24px;
-  `
+  `,
 }
 
 export default styles
