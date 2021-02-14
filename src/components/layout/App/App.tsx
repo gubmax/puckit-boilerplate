@@ -1,15 +1,15 @@
 import React, { FC } from 'react'
 import { Global } from '@emotion/react'
 
-import {ServerSidePropsProvider} from '../../services'
-import {Main} from '../Main'
+import { ServerSidePropsProvider } from '../../services'
+import { Main } from '../Main'
 import { AppProps } from './types'
-import styles from './styles'
+import s from './styles'
 
 const App: FC<AppProps> = ({ serverSideProps = {} }) => {
   return (
     <ServerSidePropsProvider value={serverSideProps}>
-      <Global styles={styles} />
+      <Global styles={s} />
       <Main />
     </ServerSidePropsProvider>
   )

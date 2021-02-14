@@ -1,5 +1,5 @@
 import { ServerSideProps } from '../../services/ServerSidePropsProvider'
 
-export type AppProps = {
+export interface AppProps {
   serverSideProps?: ServerSideProps,
 }

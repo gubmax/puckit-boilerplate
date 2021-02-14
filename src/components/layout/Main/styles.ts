@@ -1,15 +1,20 @@
 import { css } from '@emotion/react'
 
 const styles = {
-  wrapper: css`
+  page: css`
     display: grid;
     grid-template-columns: 280px 1fr;
-    grid-template-areas: "aside main";
+    grid-template-rows: 0fr 1fr;
+    grid-template-areas:
+      "aside header"
+      "aside main";
     min-height: 100vh;
   `,
-  main: css`
+  wrapper: css`
     grid-area: main;
-    padding: 20px;
+  `,
+  main: css`
+    padding: 0 20px 20px 20px;
   `,
   title: css`
     font-size: 16px;

@@ -7,7 +7,11 @@ import s from './styles'
 const Sidebar: FC = () => {
   return (
     <aside css={s.wrapper}>
-      <p css={s.title}>Puckit Boilerplate</p>
+      <p css={s.title}>
+        <span>Puc</span>
+        <span css={s.highlight}>K</span>
+        <span>it</span>
+      </p>
     </aside>
   )
 }

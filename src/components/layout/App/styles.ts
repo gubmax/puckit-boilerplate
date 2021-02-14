@@ -74,7 +74,7 @@ const styles = css`
   }
   
   body {
-    background: var(--color-light);
+    background: var(--color-dark);
     color: var(--color-primary);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

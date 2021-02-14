@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 import { jsx } from '@emotion/react'
 
-import { Header } from '../Header'
-import { MainServerSideProps } from './types'
-import { Sidebar } from '../Sidebar'
 import { useServerSideProps } from '../../../hooks'
+import { Header, Sidebar } from '../../layout'
+import { Wrapper } from '../../elements'
+import { MainServerSideProps } from './types'
 import s from './styles'
 
 export const getServerSideProps = async (): Promise<MainServerSideProps> => {
@@ -17,16 +17,19 @@ export const getServerSideProps = async (): Promise<MainServerSideProps> => {
 const Main: FC = () => {
   const { serverSideMsg } = useServerSideProps<MainServerSideProps>()
 
-  return (
-    <div css={s.wrapper}>
-      <Sidebar />
-      <div css={s.main}>
+  return useMemo(
+    () => (
+      <div css={s.page}>
+        <Sidebar />
         <Header />
-        <main>
-          <p css={s.title}>{serverSideMsg}</p>
+        <main css={s.main}>
+          <Wrapper css={s.wrapper}>
+            <p css={s.title}>{serverSideMsg}</p>
+          </Wrapper>
         </main>
       </div>
-    </div>
+    ),
+    [serverSideMsg],
   )
 }
 

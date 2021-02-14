@@ -1,9 +1,10 @@
 import React from 'react'
-import { hydrate } from 'react-dom'
+import { render, hydrate } from 'react-dom'
 
-import {App} from './components/layout/App'
+import { App } from './components/layout/App'
+import { ServerSideProps } from './components/services/ServerSidePropsProvider'
 
-let serverSideProps
+let serverSideProps: ServerSideProps
 
 if (window.SERVER_SIDE_PROPS) {
   serverSideProps = { ...window.SERVER_SIDE_PROPS }
