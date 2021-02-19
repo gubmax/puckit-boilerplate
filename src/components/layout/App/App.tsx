@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { Global } from '@emotion/react'
 
-import { ServerSidePropsProvider } from '../../services'
-import { Main } from '../Main'
+import { ServerSidePropsProvider } from 'src/components/services'
+import { Main } from 'src/components/layout'
 import { AppProps } from './types'
 import s from './styles'
 

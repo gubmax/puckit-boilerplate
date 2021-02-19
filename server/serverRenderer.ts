@@ -1,7 +1,7 @@
 import { createElement } from 'react'
 import { renderToString } from 'react-dom/server'
 
-import {App} from '../src/components/layout/App'
+import { App } from 'src/components/layout/App'
 import htmlTemplate from '../dist/index.html'
 
 export async function serverRenderer(): Promise<string> {

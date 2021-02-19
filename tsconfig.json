@@ -1,4 +1,5 @@
 {
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "ES2015",
     "lib": ["DOM", "DOM.iterable", "ESNext"],
@@ -14,6 +15,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
-  },
-  "include": ["src", "server"],
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "server/*": ["server/*"]
+    }
+  }
 }
