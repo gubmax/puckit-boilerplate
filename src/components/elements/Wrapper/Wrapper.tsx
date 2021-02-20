@@ -1,13 +1,15 @@
 /** @jsx jsx */
-import { FC } from 'react'
+import { FC, } from 'react'
 import { jsx } from '@emotion/react'
 
-import { StyledProps } from 'src/types/styledProps'
+import { WrapperProps } from './types'
 import s from './styles'
 
-const Wrapper: FC<StyledProps> = ({ className, style, children }) => {
+const Wrapper: FC<WrapperProps> = ({
+  tag: Tag = 'div', className = '', style, children,
+}) => {
   return (
-    <div css={[s.wrapper, style]} className={className}>{children}</div>
+    <Tag css={[s.wrapper, style]} className={className}>{children}</Tag>
   )
 }
 
