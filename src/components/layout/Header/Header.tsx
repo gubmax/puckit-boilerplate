@@ -6,7 +6,7 @@ import s from './styles'
 
 const Header: FC = () => {
   return (
-    <div css={s.wrapper}>Some page title</div>
+    <div css={s.wrapper}>About</div>
   )
 }
 

@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
 import { Logo } from 'src/components/layout'
-import { List } from 'src/components/elements'
+import { List, IW } from 'src/components/elements'
 import s from './styles'
 
 const Sidebar: FC = () => {
@@ -11,12 +11,12 @@ const Sidebar: FC = () => {
     <aside css={s.wrapper}>
       <Logo />
       <List tag='ul' css={s.list}>
-        <li>About</li>
-        <li>Code Splitting</li>
-        <li>Network</li>
-        <li>Error Handling</li>
-        <li>Validation</li>
-        <li>Modal and Popup</li>
+        <IW tag="li" active>About</IW>
+        <IW tag="li">Code Splitting</IW>
+        <IW tag="li">Network</IW>
+        <IW tag="li">Error Handling</IW>
+        <IW tag="li">Validation</IW>
+        <IW tag="li">Modal and Popup</IW>
       </List>
     </aside>
   )

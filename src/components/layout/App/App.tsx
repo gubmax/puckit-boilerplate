@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, StrictMode } from 'react'
 import { Global } from '@emotion/react'
 
 import { ServerSidePropsProvider } from 'src/components/services'
@@ -8,10 +8,12 @@ import s from './styles'
 
 const App: FC<AppProps> = ({ serverSideProps = {} }) => {
   return (
-    <ServerSidePropsProvider value={serverSideProps}>
-      <Global styles={s} />
-      <Main />
-    </ServerSidePropsProvider>
+    <StrictMode>
+      <ServerSidePropsProvider value={serverSideProps}>
+        <Global styles={s} />
+        <Main />
+      </ServerSidePropsProvider>
+    </StrictMode>
   )
 }
 
