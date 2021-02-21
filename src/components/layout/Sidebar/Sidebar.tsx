@@ -2,16 +2,15 @@
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
-import { Logo } from 'src/components/layout'
 import { List, IW } from 'src/components/elements'
 import s from './styles'
 
 const Sidebar: FC = () => {
   return (
     <aside css={s.wrapper}>
-      <Logo />
-      <List tag='ul' css={s.list}>
-        <IW tag="li" active>About</IW>
+      <List tag='ul'>
+        <IW tag="li">About</IW>
+        <IW tag="li" active>Server Side Rendering</IW>
         <IW tag="li">Code Splitting</IW>
         <IW tag="li">Network</IW>
         <IW tag="li">Error Handling</IW>

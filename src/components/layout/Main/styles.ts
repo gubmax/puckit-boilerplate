@@ -6,18 +6,18 @@ const styles = {
     grid-template-columns: 280px 1fr;
     grid-template-rows: 0fr 1fr;
     grid-template-areas:
-      "aside header"
+      "header header"
       "aside main";
     min-height: 100vh;
   `,
-  wrapper: css`
-    grid-area: main;
-  `,
   main: css`
-    padding: 0 20px 20px 20px;
+    grid-area: main;
+    padding: 0 20px 20px;
   `,
   title: css`
-    font-size: 16px;
+    margin-bottom: 12px;
+    font-size: 40px;
+    font-weight: bold;
   `,
 }
 

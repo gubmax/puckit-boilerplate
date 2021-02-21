@@ -1,9 +1,6 @@
 import { css } from '@emotion/react'
 
 const styles = {
-  title: css`
-    font-size: 24px;
-  `,
   highlight: css`
     display: inline-block;
     width: 1.15em;

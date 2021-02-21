@@ -1,12 +1,15 @@
 /** @jsx jsx */
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 import { jsx } from '@emotion/react'
 
+import { Logo } from 'src/components/layout'
 import s from './styles'
 
 const Header: FC = () => {
   return (
-    <div css={s.wrapper}>About</div>
+    <div css={s.wrapper}>
+      <span>Puc<Logo />it Boilerplate</span>
+    </div>
   )
 }
 

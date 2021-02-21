@@ -20,12 +20,11 @@ const Main: FC = () => {
   return useMemo(
     () => (
       <div css={s.page}>
-        <Sidebar />
         <Header />
+        <Sidebar />
         <main css={s.main}>
-          <Wrapper css={s.wrapper}>
-            <p css={s.title}>{serverSideMsg}</p>
-          </Wrapper>
+          <h1 css={s.title}>Server Side Rendering</h1>
+          <p>{serverSideMsg}</p>
         </main>
       </div>
     ),
