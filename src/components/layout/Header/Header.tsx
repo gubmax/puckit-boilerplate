@@ -8,7 +8,8 @@ import s from './styles'
 const Header: FC = () => {
   return (
     <div css={s.wrapper}>
-      <span>Puc<Logo />it Boilerplate</span>
+      <span css={s.logoWrapper}>Puc<Logo />it Boilerplate</span>
+      <a css={s.link} href="https://github.com/gubmax/puckit-boilerplate" target="_blank" rel="noopener">GitHub</a>
     </div>
   )
 }

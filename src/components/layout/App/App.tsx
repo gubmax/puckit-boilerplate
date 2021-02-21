@@ -9,8 +9,8 @@ import s from './styles'
 const App: FC<AppProps> = ({ serverSideProps = {} }) => {
   return (
     <StrictMode>
+      <Global styles={s} />
       <ServerSidePropsProvider value={serverSideProps}>
-        <Global styles={s} />
         <Main />
       </ServerSidePropsProvider>
     </StrictMode>
