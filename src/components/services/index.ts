@@ -1,1 +1,1 @@
-export { ServerSidePropsContext, default as ServerSidePropsProvider } from './ServerSidePropsProvider'
+export { default as ServerSidePropsContext } from './ServerSidePropsContext'

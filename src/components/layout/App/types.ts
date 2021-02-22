@@ -1,4 +1,4 @@
-import { ServerSideProps } from '../../services/ServerSidePropsProvider'
+import { ServerSideProps } from 'src/components/services/ServerSidePropsContext'
 
 export interface AppProps {
   serverSideProps?: ServerSideProps,

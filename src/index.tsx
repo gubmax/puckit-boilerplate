@@ -2,7 +2,7 @@ import React from 'react'
 import { render, hydrate } from 'react-dom'
 
 import { App } from 'src/components/layout'
-import { ServerSideProps } from 'src/components/services/ServerSidePropsProvider'
+import { ServerSideProps } from 'src/components/services/ServerSidePropsContext'
 
 let serverSideProps: ServerSideProps
 
