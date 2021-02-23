@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 
 const styles = {
   wrapper: css`
-    background: var(--color-light);
+    background: var(--rgb-bg2);
     border-radius: 12px;
   `
 }

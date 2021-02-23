@@ -7,8 +7,8 @@ const styles = {
   `,
   separator: css`
     border: none;
-    color: var(--color-border-light);
-    background-color: var(--color-border-light);
+    color: var(--rgb-border-bg2);
+    background-color: var(--rgb-border-bg2);
     height: 1px;
     margin: 0 20px;
   `,

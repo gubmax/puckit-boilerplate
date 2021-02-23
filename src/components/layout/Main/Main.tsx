@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react'
 
 import { useServerSideProps } from 'src/hooks'
 import { Header, Sidebar } from 'src/components/layout'
-import { Wrapper } from 'src/components/elements'
 import { MainServerSideProps } from './types'
 import s from './styles'
 

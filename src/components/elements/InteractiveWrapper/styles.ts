@@ -5,11 +5,11 @@ const styles = {
     cursor: pointer;
     transition: background .2s;
     &:active {
-      background: var(--color-accent-light);
+      background: var(--rgb-accent-light);
     }
   `,
   active: css`
-    color: var(--color-accent);
+    color: var(--rgb-accent);
     font-weight: bold;
   `
 }

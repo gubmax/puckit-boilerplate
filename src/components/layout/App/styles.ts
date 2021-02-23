@@ -24,47 +24,48 @@ const styles = css`
   
   html {
     font-size: 14px;
+
+    --color-primary: 64, 64, 64;
+    --color-secondary: 118, 118, 118;
+    --color-accent: 63, 81, 181;
+    --color-accent-light: 208, 214, 231;
+    --color-bg0: 230, 230, 230;
+    --color-bg1: 118, 118, 118;
+    --color-bg2: 245, 245, 245;
+    --color-bg3: 255, 255, 255;
+    --color-border: 190, 190, 190;
+    --color-border-light: 235, 235, 235;
+    --color-error: 198, 40, 40;
+    --color-error-light: 246, 213, 213;
   
-    --color-lighter: rgb(255, 255, 255);
-    --color-light: rgb(245, 245, 245);
-    --color-dark: rgb(230, 230, 230);
-    --color-darker: rgb(118, 118, 118);
-    --color-secondary: rgb(118, 118, 118);
-    --color-primary: rgb(64, 64, 64);
-    --color-accent: rgb(63, 81, 181);
-    --color-border: rgb(190, 190, 190);
-    --color-border-light: rgb(235, 235, 235);
-    --color-error: rgb(198, 40, 40);
-    --color-error-light: rgb(246, 213, 213);
-  
-    --color-accent-light: rgba(var(--rgb-accent), .2);
-  
-    --rgb-accent: 63, 81, 181;
-    --rgb-light: 242, 242, 242;
-    --rgb-shadow: 18, 24, 28;
-  
-    --rgba-shadow: rgba(var(--rgb-shadow), .12);
+    --rgb-primary: rgb(var(--color-primary));
+    --rgb-secondary: rgb(var(--color-secondary));
+    --rgb-accent: rgb(var(--color-accent));
+    --rgb-accent-light: rgba(var(--color-accent-light));
+    --rgb-bg0: rgb(var(--color-bg0));
+    --rgb-bg1: rgb(var(--color-bg1));
+    --rgb-bg2: rgb(var(--color-bg2));
+    --rgb-bg3: rgb(var(--color-bg3));
+    --rgb-border: rgb(var(--color-border));
+    --rgb-border-light: rgb(var(--color-border-light));
+    --rgb-error: rgb(var(--color-error));
+    --rgb-error-light: rgb(var(--color-error-light));  
   }
   
   @media (prefers-color-scheme: dark) {
     html {
-      --color-lighter: rgb(33, 33, 33);
-      --color-light: rgb(26, 26, 26);
-      --color-dark: rgb(17, 17, 17);
-      --color-darker: rgb(176, 176, 177);
-      --color-secondary: rgb(64, 64, 64);
-      --color-primary: rgb(224, 224, 224);
-      --color-accent: rgb(92, 107, 192);
-      --color-border: rgb(12, 12, 12);
-      --color-border-light: rgb(20, 20, 20);
-      --color-error: rgb(255, 95, 82);
-      --color-error-light: rgb(75, 49, 48);
-  
-      --rgb-accent: 92, 107, 192;
-      --rgb-light: 26, 26, 26;
-      --rgb-shadow: 18, 24, 28;
-  
-      --rgba-shadow: rgba(var(--rgb-shadow), .4);
+      --color-primary: 224, 224, 224;
+      --color-secondary: 64, 64, 64;
+      --color-accent: 92, 107, 192;
+      --color-accent-light: 39, 43, 59;
+      --color-bg0: 17, 17, 17;
+      --color-bg1: 176, 176, 177;
+      --color-bg2: 26, 26, 26;
+      --color-bg3: 33, 33, 33;
+      --color-border: 12, 12, 12;
+      --color-border-light: 20, 20, 20;
+      --color-error: 255, 95, 82;
+      --color-error-light: 75, 49, 48;
     }
   }
   
@@ -74,8 +75,8 @@ const styles = css`
   }
   
   body {
-    background: var(--color-dark);
-    color: var(--color-primary);
+    background: var(--rgb-bg0);
+    color: var(--rgb-primary);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -105,7 +106,7 @@ const styles = css`
   @keyframes autofill {
     to {
       color: inherit;
-      background: var(--color-light);
+      background: var(--rgb-bg2);
     }
   }
 `
