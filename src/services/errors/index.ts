@@ -1,1 +1,0 @@
-export { ExtendedErrors } from './errors'
