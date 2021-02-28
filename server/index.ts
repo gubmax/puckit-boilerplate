@@ -1,7 +1,7 @@
 import Fastify, { FastifyInstance } from 'fastify'
 import fetch from 'node-fetch'
 
-import { useRouter } from './router'
+import { useRouter } from 'server/router'
 
 global.fetch = fetch
 

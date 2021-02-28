@@ -3,14 +3,13 @@ import { FC, useMemo } from 'react'
 import { jsx } from '@emotion/react'
 
 import { useServerSideProps } from 'src/hooks'
-import { httpRequest } from 'src/modules/http'
-import { DataRequest } from 'src/services/requests'
+import { SsrMessageRequest } from 'src/services/requests'
 import { Header, Sidebar } from 'src/components/layout'
 import { MainServerSideProps } from './types'
 import s from './styles'
 
-export const getServerSideProps = async (): Promise<MainServerSideProps> => {
-  const { text } = await httpRequest<DataRequest.Response>(DataRequest.config)
+export async function getServerSideProps(): Promise<MainServerSideProps> {
+  const { text } = await new SsrMessageRequest().send()
   return { serverSideMsg: text }
 }
 
