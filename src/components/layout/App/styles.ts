@@ -25,6 +25,13 @@ const styles = css`
   html {
     font-size: 14px;
 
+    --fs-primary: 1rem;
+    --fs-h1: 3rem;
+    --fs-h2: 1.65rem;
+
+    --space-primary: 1.5rem;
+    --space-secondary: 1.15rem;
+
     --color-primary: 64, 64, 64;
     --color-secondary: 118, 118, 118;
     --color-accent: 63, 81, 181;
@@ -49,7 +56,7 @@ const styles = css`
     --rgb-border: rgb(var(--color-border));
     --rgb-border-light: rgb(var(--color-border-light));
     --rgb-error: rgb(var(--color-error));
-    --rgb-error-light: rgb(var(--color-error-light));  
+    --rgb-error-light: rgb(var(--color-error-light));
   }
   
   @media (prefers-color-scheme: dark) {
