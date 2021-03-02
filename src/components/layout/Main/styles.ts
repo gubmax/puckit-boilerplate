@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 const styles = {
   page: css`
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 20rem 1fr;
     grid-template-rows: 0fr 1fr;
     grid-template-areas:
       "header header"
@@ -12,11 +12,11 @@ const styles = {
   `,
   main: css`
     grid-area: main;
-    padding: 0 20px 20px;
+    padding: 0 var(--space-primary) var(--padding-secondary);
   `,
   title: css`
-    margin-bottom: 12px;
-    font-size: 40px;
+    margin-bottom: var(--space-secondary);
+    font-size: var(--fs-h1);
     font-weight: bold;
   `,
 }

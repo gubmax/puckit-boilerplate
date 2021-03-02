@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { FC, useMemo } from 'react'
 import { jsx } from '@emotion/react'
+import { useRoutes } from 'react-router-dom'
 
 import { useServerSideProps } from 'src/hooks'
 import { SsrMessageRequest } from 'src/services/requests'
 import { Header, Sidebar } from 'src/components/layout'
+import { ROUTES } from './constants'
 import { MainServerSideProps } from './types'
 import s from './styles'
 
@@ -15,6 +17,7 @@ export async function getServerSideProps(): Promise<MainServerSideProps> {
 
 const Main: FC = () => {
   const { serverSideMsg } = useServerSideProps<MainServerSideProps>()
+  const element = useRoutes(ROUTES)
 
   return useMemo(
     () => (
@@ -24,10 +27,11 @@ const Main: FC = () => {
         <main css={s.main}>
           <h1 css={s.title}>Server Side Rendering</h1>
           <p>{serverSideMsg}</p>
+          {element}
         </main>
       </div>
     ),
-    [serverSideMsg],
+    [serverSideMsg, element],
   )
 }
 

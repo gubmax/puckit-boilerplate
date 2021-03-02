@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, hydrate } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import { App } from 'src/components/layout'
 import { ServerSideProps } from 'src/components/services/ServerSidePropsContext'
@@ -12,4 +13,11 @@ if (window.SERVER_SIDE_PROPS) {
 }
 
 const renderApp = module.hot ? render : hydrate
-renderApp(<App serverSideProps={serverSideProps} />, document.getElementById('app-root'))
+
+const markup = (
+  <BrowserRouter>
+    <App serverSideProps={serverSideProps} />
+  </BrowserRouter>
+)
+
+renderApp(markup, document.getElementById('app-root'))

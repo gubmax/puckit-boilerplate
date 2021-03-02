@@ -9,6 +9,6 @@ export function useRouter(server: FastifyInstance) {
   server.post('/api/data', opts, SsrMessageService.getMessage)
   server.get('*', opts, (response, reply) => {
     reply.type('text/html')
-    return serverRenderer()
+    return serverRenderer(response.url)
   })
 }

@@ -1,21 +1,25 @@
 /** @jsx jsx */
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
+import { Link, useLocation } from 'react-router-dom'
 
 import { List, IW } from 'src/components/elements'
+import { ROUTES } from './constants'
 import s from './styles'
 
 const Sidebar: FC = () => {
+  const {pathname} = useLocation();
+
   return (
     <aside css={s.wrapper}>
-      <List tag='ul'>
-        <IW tag="li">About</IW>
-        <IW tag="li" active>Server Side Rendering</IW>
-        <IW tag="li">Code Splitting</IW>
-        <IW tag="li">Network</IW>
-        <IW tag="li">Error Handling</IW>
-        <IW tag="li">Validation</IW>
-        <IW tag="li">Modal and Popup</IW>
+      <List>
+        {ROUTES.map(({to, text}) => {
+          return (
+            <Link to={to}>
+              <IW key={to} active={to === pathname}>{text}</IW>
+            </Link>
+          )
+        })}
       </List>
     </aside>
   )

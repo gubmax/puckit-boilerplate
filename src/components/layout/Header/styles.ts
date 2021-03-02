@@ -5,10 +5,10 @@ const styles = {
     grid-area: header;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: var(--space-primary);
   `,
   logoWrapper: css`
-    font-size: 24px;
+    font-size: var(--fs-h2);
   `,
   link: css`
     margin-left: auto;
