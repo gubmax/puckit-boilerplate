@@ -15,8 +15,8 @@ const Sidebar: FC = () => {
       <List>
         {ROUTES.map(({to, text}) => {
           return (
-            <Link to={to}>
-              <IW key={to} active={to === pathname}>{text}</IW>
+            <Link key={to} to={to}>
+              <IW active={to === pathname}>{text}</IW>
             </Link>
           )
         })}
