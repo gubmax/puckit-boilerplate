@@ -2,9 +2,11 @@
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
+import { H1 } from 'src/components/typography'
+
 const ModalAndPopupPage: FC = () => {
   return (
-    <div>ModalAndPopupPage</div>
+    <H1>Modal and Popup</H1>
   )
 }
 

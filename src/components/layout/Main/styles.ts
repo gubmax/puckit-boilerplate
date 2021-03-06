@@ -14,11 +14,6 @@ const styles = {
     grid-area: main;
     padding: 0 var(--space-primary) var(--padding-secondary);
   `,
-  title: css`
-    margin-bottom: var(--space-secondary);
-    font-size: var(--fs-h1);
-    font-weight: bold;
-  `,
 }
 
 export default styles

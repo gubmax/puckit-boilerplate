@@ -2,9 +2,11 @@
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
+import { H1 } from 'src/components/typography'
+
 const NetworkPage: FC = () => {
   return (
-    <div>NetworkPage</div>
+    <H1>Network</H1>
   )
 }
 

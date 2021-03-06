@@ -2,9 +2,11 @@
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
+import { H1 } from 'src/components/typography'
+
 const HomePage: FC = () => {
   return (
-    <div>HomePage</div>
+    <H1>About</H1>
   )
 }
 

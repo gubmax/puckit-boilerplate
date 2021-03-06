@@ -2,9 +2,11 @@
 import { FC } from 'react'
 import { jsx } from '@emotion/react'
 
+import { H1 } from 'src/components/typography'
+
 const ErrorHandlingPage: FC = () => {
   return (
-    <div>ErrorHandlingPage</div>
+    <H1>Error Handling</H1> 
   )
 }
 

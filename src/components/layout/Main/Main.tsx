@@ -25,9 +25,8 @@ const Main: FC = () => {
         <Header />
         <Sidebar />
         <main css={s.main}>
-          <h1 css={s.title}>Server Side Rendering</h1>
-          <p>{serverSideMsg}</p>
           {element}
+          <p>{serverSideMsg}</p>
         </main>
       </div>
     ),
