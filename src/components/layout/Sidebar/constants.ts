@@ -6,6 +6,6 @@ export const ROUTES: Array<{to: PageRoutes, text: string}> = [
   {to: PageRoutes.ERROR_HANDLING, text: 'Error Handling'},
   {to: PageRoutes.MODAL_AND_POPUP, text: 'Modal and Popup'},
   {to: PageRoutes.NETWORK, text: 'Network'},
-  {to: PageRoutes.SSR, text: 'Server Side Rendering'},
+  {to: PageRoutes.SSR, text: 'Server-Side Rendering'},
   {to: PageRoutes.VALIDATION, text: 'Validation'},
 ]

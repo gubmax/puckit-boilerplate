@@ -3,7 +3,7 @@ import { render, hydrate } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 import { App } from 'src/components/layout'
-import { ServerSideProps } from 'src/components/services/ServerSidePropsContext'
+import { ServerSideProps } from 'src/components/services'
 
 let serverSideProps: ServerSideProps
 
@@ -12,7 +12,7 @@ if (window.SERVER_SIDE_PROPS) {
   delete window.SERVER_SIDE_PROPS
 }
 
-const renderApp = module.hot ? render : hydrate
+const init = module.hot ? render : hydrate
 
 const markup = (
   <BrowserRouter>
@@ -20,4 +20,4 @@ const markup = (
   </BrowserRouter>
 )
 
-renderApp(markup, document.getElementById('app-root'))
+init(markup, document.getElementById('app-root'))

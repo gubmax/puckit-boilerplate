@@ -8,7 +8,7 @@ import { ROUTES } from './constants'
 import s from './styles'
 
 const Sidebar: FC = () => {
-  const {pathname} = useLocation();
+  const {pathname} = useLocation()
 
   return (
     <aside css={s.wrapper}>

@@ -1,4 +1,4 @@
-import Fastify, { FastifyInstance } from 'fastify'
+import Fastify from 'fastify'
 import fetch from 'node-fetch'
 
 import { useRouter } from 'server/router'
@@ -6,7 +6,7 @@ import { useRouter } from 'server/router'
 global.fetch = fetch
 
 async function bootstrap() {
-  const server: FastifyInstance = Fastify()
+  const server = Fastify()
 
   useRouter(server)
 

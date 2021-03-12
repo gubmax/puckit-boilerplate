@@ -6,8 +6,21 @@ export abstract class HttpRequestImplementation<
   B extends HttpRequestBody = never,
 > {
   abstract readonly init: HttpRequestInit
+  response?: R
+  error?: Error
   
-  send(body?: B): Promise<R> {
-    return httpRequest<R, B>(this.init, body)
+  async send(...args: B extends never ? never : [B]): Promise<R>
+  async send(body: B): Promise<R> {
+    this.response = undefined
+    this.error = undefined
+
+    try {
+      const res = await httpRequest<R, B>(this.init, body)
+      this.response = res
+      return res
+    } catch (error) {
+      this.error = error
+      throw error
+    }
   }
 }

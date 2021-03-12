@@ -1,2 +1,2 @@
 export { ApiRoutes, PageRoutes } from './constants'
-export { SsrMessageRequest } from './SsrMessageRequest'
+export { default as ssrMessageRequest } from './SsrMessageRequest'

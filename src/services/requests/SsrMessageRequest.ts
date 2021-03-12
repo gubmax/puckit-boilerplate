@@ -5,9 +5,11 @@ interface SsrMessageResponse {
   text: string;
 } 
 
-export class SsrMessageRequest extends HttpRequestImplementation<SsrMessageResponse> {
+class SsrMessageRequest extends HttpRequestImplementation<SsrMessageResponse> {
   init = {
-    input: ApiRoutes.DATA,
+    input: ApiRoutes.SSR_MESSAGE,
     method: HttpRequestMethods.POST,
   }
 }
+
+export default new SsrMessageRequest()
