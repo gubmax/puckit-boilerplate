@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useMemo } from 'react'
+import { FC, useEffect, useMemo } from 'react'
 
 import { ssrMessageRequest } from 'src/services/requests'
 import { useServerSideProps, useRequest } from 'src/hooks'
@@ -21,11 +21,11 @@ const SsrPage: FC = () => {
   }, [messageRequest])
 
   return useMemo(() => (
-    <Fragment>
+    <>
       <H1>Server-Side Rendering</H1>
       {loading && <Loader/>}
       <p>{serverSideMsg || data?.text}</p>
-    </Fragment>
+    </>
   ), [serverSideMsg, loading, data])
 }
 
