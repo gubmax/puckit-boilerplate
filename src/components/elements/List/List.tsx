@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import {FC, Children, Fragment, ReactElement} from 'react'
-import { jsx } from '@emotion/react'
+import {FC, Children, Fragment} from 'react'
 
 import { Wrapper } from 'src/components/elements'
 import { ListProps } from './types'

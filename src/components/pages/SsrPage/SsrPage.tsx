@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC, Fragment, useEffect, useMemo } from 'react'
-import { jsx } from '@emotion/react'
 
 import { ssrMessageRequest } from 'src/services/requests'
 import { useServerSideProps, useRequest } from 'src/hooks'

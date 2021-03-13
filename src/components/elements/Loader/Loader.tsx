@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC, memo } from 'react'
-import { jsx } from '@emotion/react'
 
 import { LoaderProps } from './types'
 import s from './styles'

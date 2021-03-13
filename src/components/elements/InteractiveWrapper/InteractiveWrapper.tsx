@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC, } from 'react'
-import { jsx } from '@emotion/react'
 
 import { Wrapper } from 'src/components/elements'
 import { InteractiveWrapperProps } from './types'

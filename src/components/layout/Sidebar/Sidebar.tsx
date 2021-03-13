@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC } from 'react'
-import { jsx } from '@emotion/react'
 import { Link, useLocation } from 'react-router-dom'
 
 import { List, IW } from 'src/components/elements'

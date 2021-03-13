@@ -12,6 +12,9 @@ module.exports = function(api) {
         helpers: true,
         regenerator: true,
       }],
+      ['@emotion', {
+        labelFormat: '[dirname]--[local]',
+      }],
     ],
   };
 };

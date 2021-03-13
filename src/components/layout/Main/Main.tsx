@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC } from 'react'
-import { jsx } from '@emotion/react'
 import { useRoutes } from 'react-router-dom'
 
 import { Header, Sidebar } from 'src/components/layout'

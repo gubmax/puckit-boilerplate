@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC } from 'react'
-import { jsx } from '@emotion/react'
 
 import { Heading1Props } from './types'
 import s from './styles'

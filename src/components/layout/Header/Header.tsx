@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { FC } from 'react'
-import { jsx } from '@emotion/react'
 
 import { Logo } from 'src/components/layout'
 import { LINK_REPO } from './constants'
