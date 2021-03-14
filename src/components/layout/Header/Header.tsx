@@ -8,7 +8,7 @@ const Header: FC = () => {
   return (
     <div css={s.wrapper}>
       <span css={s.logoWrapper}>Puc<Logo />it Boilerplate</span>
-      <a css={s.link} href={LINK_REPO} target="_blank" rel="noopener">GitHub</a>
+      <a css={s.link} href={LINK_REPO} target="_blank" rel="noreferrer noopener">GitHub</a>
     </div>
   )
 }

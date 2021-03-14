@@ -7,7 +7,7 @@ type HttpReqImp = HttpRequestImplementation
 type HttpReqSend<T extends HttpReqImp> = T['send']
 
 export type RequestResponse<T extends HttpReqImp> =
-  HttpReqSend<T> extends (body: infer B) => Promise<infer R> ? R : any
+  HttpReqSend<T> extends (body: infer B) => Promise<infer R> ? R : unknown
 
 export interface RequestState<T extends HttpReqImp = HttpReqImp> {
   data?:  RequestResponse<T>;

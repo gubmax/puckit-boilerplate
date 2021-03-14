@@ -1,4 +1,4 @@
-import {FC, Children} from 'react'
+import { FC, Children } from 'react'
 
 import { Wrapper } from 'src/components/elements'
 import { ListProps } from './types'
@@ -10,8 +10,8 @@ const List: FC<ListProps> = ({ className = '', style, tag, children }) => {
       {
         Children.map(children, (child, index) => (
           <>
+            {!!index && <hr css={s.separator} />}
             {child}
-            {index !== children.length - 1 && <hr css={s.separator} />}
           </>
         ))
       }

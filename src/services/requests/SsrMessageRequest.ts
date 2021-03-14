@@ -1,5 +1,5 @@
-import { HttpRequestImplementation, HttpRequestMethods } from 'src/modules/http';
-import { ApiRoutes } from './constants';
+import { HttpRequestImplementation, HttpRequestMethods } from 'src/modules/http'
+import { ApiRoutes } from './constants'
 
 interface SsrMessageResponse {
   text: string;

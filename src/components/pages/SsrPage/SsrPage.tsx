@@ -13,11 +13,11 @@ export async function getServerSideProps(): Promise<SsrPageServerSideProps> {
 }
 
 const SsrPage: FC = () => {
-  const { serverSideMsg } = useServerSideProps<SsrPageServerSideProps>()
+  const { serverSideMsg } = useServerSideProps()
   const [{ loading, data }, messageRequest] = useRequest(ssrMessageRequest)
 
   useEffect(() => {
-    messageRequest()
+    void messageRequest()
   }, [messageRequest])
 
   return useMemo(() => (

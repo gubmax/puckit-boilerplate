@@ -1,6 +1,8 @@
 import { createContext } from 'react'
 
-export type ServerSideProps = any
+export interface ServerSideProps {
+  serverSideMsg?: string;
+}
 
 const ServerSidePropsContext = createContext<ServerSideProps>({})
 

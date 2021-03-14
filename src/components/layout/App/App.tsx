@@ -1,4 +1,4 @@
-import React, { FC, StrictMode } from 'react'
+import { FC, StrictMode } from 'react'
 import { Global } from '@emotion/react'
 
 import { ServerSidePropsContext } from 'src/components/services'

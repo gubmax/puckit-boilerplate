@@ -3,19 +3,22 @@ import { MemoryRouter } from 'react-router'
 import { matchPath } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
 
-import { App } from 'src/components/layout/App'
+import { App } from 'src/components/layout'
+import { ServerSideProps } from 'src/components/services'
 import { PageRoutes } from 'src/services/requests'
 import htmlTemplate from '../dist/index.html'
 
 export async function serverRenderer(url: string): Promise<string> {
-  let serverSideProps: object = {}
+  let serverSideProps: ServerSideProps = {}
 
   if (matchPath(url, PageRoutes.SSR)) {
-    const { getServerSideProps } = require(`${__dirname}/../src/components/pages/SsrPage`)
+    const { getServerSideProps } = await import(`${__dirname}/../src/components/pages/SsrPage`) as {
+      getServerSideProps: () => Promise<ServerSideProps>
+    }
     serverSideProps = await getServerSideProps()
   }
 
-  let markup = (
+  const markup = (
     <MemoryRouter initialEntries={[url]}>
       <App serverSideProps={serverSideProps} />
     </MemoryRouter>

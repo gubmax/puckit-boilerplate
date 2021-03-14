@@ -1,7 +1,7 @@
-import { HttpRequestMethods } from './constants';
+import { HttpRequestMethods } from './constants'
 
-export type HttpRequestBody = object
-export type HttpRequestResponse = object | void
+export type HttpRequestBody = unknown
+export type HttpRequestResponse = unknown | void
 
 export interface HttpRequestInit {
   readonly input: RequestInfo;

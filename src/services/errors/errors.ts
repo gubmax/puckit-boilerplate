@@ -1,5 +1,5 @@
-import { ErrorImplementation } from 'src/modules/error';
-import { ExtendedErrorTypes } from './constants';
+import { ErrorImplementation } from 'src/modules/error'
+import { ExtendedErrorTypes } from './constants'
 
 export class Warning extends ErrorImplementation {
   type = ExtendedErrorTypes.WARNING
