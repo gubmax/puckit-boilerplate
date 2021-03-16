@@ -1,7 +1,8 @@
 import { FC, useEffect, useMemo } from 'react'
+import { Action } from 'history'
 
 import { ssrMessageRequest } from 'src/services/requests'
-import { useServerSideProps, useRequest } from 'src/hooks'
+import { useServerSideProps, useRequest, useHistory } from 'src/hooks'
 import { H1 } from 'src/components/typography'
 import { Loader } from 'src/components/elements'
 
@@ -14,19 +15,21 @@ export async function getServerSideProps(): Promise<SsrPageServerSideProps> {
 
 const SsrPage: FC = () => {
   const { serverSideMsg } = useServerSideProps()
-  const [{ loading, data }, messageRequest] = useRequest(ssrMessageRequest)
+  const [{ loading, data = { text: serverSideMsg } }, messageRequest] = useRequest(ssrMessageRequest)
+  const { action } = useHistory()
 
   useEffect(() => {
-    void messageRequest()
-  }, [messageRequest])
+    if (action === Action.Push) {
+      void messageRequest()
+    }
+  }, [action, messageRequest])
 
   return useMemo(() => (
     <>
       <H1>Server-Side Rendering</H1>
-      {loading && <Loader/>}
-      <p>{serverSideMsg || data?.text}</p>
+      {loading ? <Loader/> : <p>{data?.text}</p>}
     </>
-  ), [serverSideMsg, loading, data])
+  ), [loading, data])
 }
 
 export default SsrPage
