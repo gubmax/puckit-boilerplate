@@ -10,10 +10,6 @@ const styles = {
   logoWrapper: css`
     font-size: var(--fs-h2);
   `,
-  link: css`
-    margin-left: auto;
-    border-bottom: 1px dashed var(--rgb-primary);
-  `,
 }
 
 export default styles
