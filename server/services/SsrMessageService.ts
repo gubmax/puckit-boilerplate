@@ -4,7 +4,6 @@ interface GetMessageResponse {
 
 export class SsrMessageService {
   static async getMessage(): Promise<GetMessageResponse> {
-    await new Promise((resolve) => setTimeout(resolve, 500))
-    return { text: 'This text from the server!' }
+    return Promise.resolve({ text: 'This text from the server!' })
   }
 }
