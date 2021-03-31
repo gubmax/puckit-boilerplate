@@ -19,10 +19,10 @@ const SsrPage: FC = () => {
   const { action } = useHistory()
 
   useEffect(() => {
-    if (action === Action.Push) {
+    if (action === Action.Push || !serverSideMsg) {
       void messageRequest()
     }
-  }, [action, messageRequest])
+  }, [action, messageRequest, serverSideMsg])
 
   return useMemo(() => (
     <>
