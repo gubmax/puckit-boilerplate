@@ -1,2 +1,2 @@
-export { ErrorImplementation } from './ErrorImplementation'
-export type { ErrorImplementationArg } from './types'
+export { ErrorImpl } from './ErrorImpl'
+export type { ErrorImplProps } from './types'

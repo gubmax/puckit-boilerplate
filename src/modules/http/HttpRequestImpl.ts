@@ -1,7 +1,7 @@
 import { httpRequest } from './httpRequest'
 import { HttpRequestBody, HttpRequestInit, HttpRequestResponse } from './types'
 
-export abstract class HttpRequestImplementation<
+export abstract class HttpRequestImpl<
   R extends HttpRequestResponse = HttpRequestResponse,
   B extends HttpRequestBody = never,
 > {

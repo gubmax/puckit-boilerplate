@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useReducer, useRef } from 'react'
 
-import { HttpRequestImplementation } from 'src/modules/http'
+import { HttpRequestImpl } from 'src/modules/http'
 import { noop } from 'src/helpers'
 import { INITIAL_STATE, RequestActions } from './constants'
 import { requestReducer } from './helpers'
 import { RequestState, Request, RequestReducer } from './types'
 
-export function useRequest<T extends HttpRequestImplementation<unknown, unknown>>(
+export function useRequest<T extends HttpRequestImpl<unknown, unknown>>(
   request: T,
 ): [RequestState<T>, Request<T>] {
   const [state, dispatch] = useReducer<RequestReducer<T>>(requestReducer, INITIAL_STATE)

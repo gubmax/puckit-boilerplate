@@ -1,4 +1,4 @@
-import { ErrorImplementationArg } from 'src/modules/error'
+import { ErrorImplProps } from 'src/modules/error'
 import { CriticalError } from 'src/services/errors'
 import { HttpRequestBody, HttpRequestInit, HttpRequestResponse } from './types'
 
@@ -14,7 +14,7 @@ export async function httpRequest<R extends HttpRequestResponse, B extends HttpR
     const data = await res.json() as R
     return data
   } catch (error) {
-    const arg: ErrorImplementationArg = {}
+    const arg: ErrorImplProps = {}
 
     if (typeof error === 'string') {
       arg.message = error

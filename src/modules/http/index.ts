@@ -1,4 +1,4 @@
 export { HttpRequestMethods } from './constants'
 export { httpRequest } from './httpRequest'
-export { HttpRequestImplementation } from './HttpRequestImplementation'
+export { HttpRequestImpl } from './HttpRequestImpl'
 export type { HttpRequestInit } from './types'

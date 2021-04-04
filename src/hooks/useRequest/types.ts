@@ -1,21 +1,20 @@
 import { Reducer } from 'react'
 
-import { HttpRequestImplementation } from 'src/modules/http'
+import { HttpRequestImpl } from 'src/modules/http'
 import { RequestActions } from './constants'
 
-type HttpReqImp = HttpRequestImplementation
-type HttpReqSend<T extends HttpReqImp> = T['send']
+type HttpReqSend<T extends HttpRequestImpl> = T['send']
 
-export type RequestResponse<T extends HttpReqImp> =
+export type RequestResponse<T extends HttpRequestImpl> =
   HttpReqSend<T> extends (body: infer B) => Promise<infer R> ? R : unknown
 
-export interface RequestState<T extends HttpReqImp = HttpReqImp> {
+export interface RequestState<T extends HttpRequestImpl = HttpRequestImpl> {
   data?:  RequestResponse<T>;
   error?: Error;
   loading: boolean;
 }
 
-export type Request<T extends HttpReqImp> =
+export type Request<T extends HttpRequestImpl> =
   HttpReqSend<T> extends (body: infer B) => Promise<infer R>
     ? [B] extends [never]
       ? () => Promise<R>
@@ -27,7 +26,7 @@ type RequestStartAction = {
   payload?: never;
 }
 
-type RequestSuccessAction<T extends HttpReqImp = HttpReqImp> = {
+type RequestSuccessAction<T extends HttpRequestImpl = HttpRequestImpl> = {
   type: RequestActions.SUCCESS;
   payload?: RequestResponse<T>;
 }
@@ -39,4 +38,4 @@ type RequestFailureAction = {
 
 export type RequestAction = RequestStartAction | RequestSuccessAction | RequestFailureAction
 
-export type RequestReducer<T extends HttpReqImp = HttpReqImp> = Reducer<RequestState<T>, RequestAction>
+export type RequestReducer<T extends HttpRequestImpl = HttpRequestImpl> = Reducer<RequestState<T>, RequestAction>
