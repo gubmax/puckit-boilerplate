@@ -12,7 +12,7 @@ const styles = {
   `,
   main: css`
     grid-area: main;
-    padding: 0 var(--space-primary) var(--padding-secondary);
+    padding: 0 var(--space-primary) var(--space-secondary);
   `,
 }
 

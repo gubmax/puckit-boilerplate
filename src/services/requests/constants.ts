@@ -4,6 +4,7 @@ export enum ApiRoutes {
 
 export enum PageRoutes {
   ROOT = '/',
+  STATE_MANAGMENT = '/state-managment',
   SSR = '/ssr',
   CODE_SPLITTING = '/cose-splitting',
   NETWORK = '/network',
