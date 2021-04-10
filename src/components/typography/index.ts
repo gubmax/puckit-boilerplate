@@ -1,2 +1,2 @@
 export { A } from './Anchor'
-export { H1 } from './Heading1'
+export { H1, H2 } from './Heading'

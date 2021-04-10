@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { observer } from 'mobx-react-lite'
 
+import { H2 } from 'src/components/typography'
 import { ProductList } from './components'
 import { CartModel } from './models'
 import { MOCK_PRODUCTS } from './constants'
@@ -16,7 +17,7 @@ const Cart: FC = () => {
 
   return (
     <>
-      <p>Cart</p>
+      <H2>Cart</H2>
       {listTemplate}
       <p>Total price: {totalPrice}</p>
     </>

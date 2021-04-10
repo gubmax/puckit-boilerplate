@@ -8,7 +8,7 @@ const styles = {
     padding: var(--space-primary);
   `,
   logoWrapper: css`
-    font-size: var(--fs-h2);
+    margin-bottom: 0;
   `,
 }
 
