@@ -1,4 +1,4 @@
-import { StyledProps } from 'src/types/styledProps'
+import { StyledProps } from 'src/types'
 
 export interface LoaderProps extends StyledProps {
   small?: boolean,

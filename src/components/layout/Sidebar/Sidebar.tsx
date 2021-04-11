@@ -1,7 +1,8 @@
 import { FC } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-import { List, IW } from 'src/components/elements'
+import { List } from 'src/components/surfaces'
+import { IW } from 'src/components/inputs'
 import { ROUTES } from './constants'
 import s from './styles'
 

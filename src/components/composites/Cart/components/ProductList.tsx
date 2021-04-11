@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import ProductItem from './ProductItem'
+import { List } from 'src/components/surfaces'
 import { CartModel } from '../models'
-import { List } from 'src/components/elements'
+import ProductItem from './ProductItem'
 
 interface ProductListProps {
   cart: CartModel,

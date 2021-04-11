@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Wrapper } from 'src/components/elements'
+import { Wrapper } from 'src/components/surfaces'
 import { CartModel } from '../models'
 import { Product } from '../types'
 

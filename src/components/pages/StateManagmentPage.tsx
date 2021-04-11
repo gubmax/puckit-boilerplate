@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Cart } from 'src/components/composite'
+import { Cart } from 'src/components/composites'
 import { H1 } from 'src/components/typography'
 
 const StateManagmentPage: FC = () => {

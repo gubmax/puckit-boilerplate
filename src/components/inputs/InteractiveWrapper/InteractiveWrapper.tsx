@@ -1,6 +1,6 @@
 import { FC, } from 'react'
 
-import { Wrapper } from 'src/components/elements'
+import { Wrapper } from 'src/components/surfaces'
 import { InteractiveWrapperProps } from './types'
 import s from './styles'
 

@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
+import { StyledProps } from 'src/types'
 import { HeadingProps } from './types'
 import { HeadingTags, stylesByTag } from './constants'
-import { StyledProps } from 'src/types/styledProps'
 
 const Heading: FC<HeadingProps> = ({
   tag: Tag, className = '', style, children,

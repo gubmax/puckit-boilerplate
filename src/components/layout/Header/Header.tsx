@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Logo } from 'src/components/layout'
+import { Logo } from 'src/components/elements'
 import { A, H2 } from 'src/components/typography'
 import { LINK_REPO } from './constants'
 import s from './styles'

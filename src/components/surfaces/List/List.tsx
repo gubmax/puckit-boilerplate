@@ -1,6 +1,6 @@
 import { FC, Children } from 'react'
 
-import { Wrapper } from 'src/components/elements'
+import { Wrapper } from 'src/components/surfaces'
 import { ListProps } from './types'
 import s from './styles'
 

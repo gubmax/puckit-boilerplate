@@ -1,5 +1,4 @@
 export { App } from './App'
 export { Header } from './Header'
-export { Logo } from './Logo'
 export { Main } from './Main'
 export { Sidebar } from './Sidebar'
