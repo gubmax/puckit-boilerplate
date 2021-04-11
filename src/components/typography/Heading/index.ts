@@ -1,2 +1,1 @@
-export { H1, H2 } from './Heading'
-export { HeadingTags } from './constants'
+export { H1, H2, H3 } from './Heading'

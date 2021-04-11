@@ -9,6 +9,10 @@ const styles = {
   h2: css`
     margin-bottom: var(--space-secondary);
     font-size: var(--fs-h2);
+    font-weight: bold;
+  `,
+  h3: css`
+    font-size: var(--fs-h3);
   `,
 }
 

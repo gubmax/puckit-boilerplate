@@ -26,8 +26,10 @@ const styles = css`
     font-size: 14px;
 
     --fs-primary: 1rem;
+    --fs-accent: 1.10rem;
     --fs-h1: 3rem;
     --fs-h2: 1.65rem;
+    --fs-h3: 1.25rem;
 
     --space-primary: 1.5rem;
     --space-secondary: 1.15rem;

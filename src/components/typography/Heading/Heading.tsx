@@ -14,3 +14,4 @@ const Heading: FC<HeadingProps> = ({
 
 export const H1: FC<StyledProps> = ({ ...props }) => <Heading {...props} tag={HeadingTags.H1} />
 export const H2: FC<StyledProps> = ({ ...props }) => <Heading {...props} tag={HeadingTags.H2} />
+export const H3: FC<StyledProps> = ({ ...props }) => <Heading {...props} tag={HeadingTags.H3} />
