@@ -16,9 +16,8 @@ export class CartModel {
 
   update = (id: string, newCurrent: number): void => {
     const product = this.goods.find((product) => product.id === id)
-    if (product) {
-      product.current = newCurrent  > 0 ? newCurrent : 1
-    }
+    if (!product) return
+    product.current = [1, newCurrent, 10].sort((a, b) => a - b)[1]
   }
 
   remove = (id: string): void => {

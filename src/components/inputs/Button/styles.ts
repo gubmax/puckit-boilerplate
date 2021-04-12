@@ -70,7 +70,12 @@ const styles = {
   `,
   large: css`
     width: 100%;
-  `
+  `,
+  rounded: css`
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+  `,
 }
 
 export default styles

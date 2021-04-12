@@ -6,8 +6,8 @@ import { ButtonProps } from './types'
 import s from './styles'
 
 const Button: FC<ButtonProps> = ({
-  children: text, primary, large, loading,
-  style, onClick = noop, ...rest
+  children: text, large, loading, primary,
+  rounded, style, onClick = noop, ...rest
 }) => {
   function handleClick() {
     if (loading) return
@@ -18,8 +18,9 @@ const Button: FC<ButtonProps> = ({
     <button
       css={[
         s.btn,
-        primary ? s.primary : s.default,
         large && s.large,
+        primary ? s.primary : s.default,
+        rounded && s.rounded,
         style,
       ]}
       onClick={handleClick}
