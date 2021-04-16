@@ -1,5 +1,5 @@
 export enum ApiRoutes {
-  SSR_MESSAGE = '/api/ssr-message',
+  SSR_MESSAGE = 'http://localhost:8000/api/ssr-message',
 }
 
 export enum PageRoutes {
