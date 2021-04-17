@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import { List } from 'src/components/surfaces'
 import { IW } from 'src/components/inputs'
@@ -8,17 +8,14 @@ import s from './styles'
 
 const Sidebar: FC = () => {
   const { pathname } = useLocation()
+  const navigate = useNavigate()
 
   return (
     <aside css={s.wrapper}>
       <List>
-        {ROUTES.map(({ to, text }) => {
-          return (
-            <Link key={to} to={to}>
-              <IW active={to === pathname}>{text}</IW>
-            </Link>
-          )
-        })}
+        {ROUTES.map(({ to, text }) => (
+          <IW key={to} active={to === pathname} onClick={() => navigate(to)}>{text}</IW>
+        ))}
       </List>
     </aside>
   )

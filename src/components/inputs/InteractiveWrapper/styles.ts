@@ -1,12 +1,11 @@
 import { css } from '@emotion/react'
 
+import { rippleStyles } from 'src/styles'
+
 const styles = {
   wrapper: css`
+    ${rippleStyles};
     cursor: pointer;
-    transition: background .1s;
-    &:active {
-      background: var(--rgb-accent-light);
-    }
   `,
   active: css`
     color: var(--rgb-accent);
