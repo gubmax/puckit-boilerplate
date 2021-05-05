@@ -1,7 +1,7 @@
 import { FC, useCallback } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { Button } from 'src/components/inputs'
+import { Button, RoundedButton } from 'src/components/inputs'
 import { Wrapper } from 'src/components/surfaces'
 import { H3 } from 'src/components/typography'
 import { ProductItemProps } from './types'
@@ -25,9 +25,9 @@ const ProductItem: FC<ProductItemProps> = ({
         </div>
         <div css={s.wrapper}>
           <Button css={s.marginRight} onClick={removeItem}>Delete</Button>
-          <Button primary rounded onClick={decrease}>-</Button>
+          <RoundedButton primary onClick={decrease}>-</RoundedButton>
           <span css={s.counter}>{current}</span>
-          <Button primary rounded onClick={increase}>+</Button>
+          <RoundedButton primary onClick={increase}>+</RoundedButton>
         </div>
       </div>
     </Wrapper>

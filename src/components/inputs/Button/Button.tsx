@@ -1,13 +1,14 @@
-import { FC, memo } from 'react'
+import { FC } from 'react'
 
 import { Loader } from 'src/components/elements'
+import { BaseButton } from 'src/components/inputs'
 import { noop } from 'src/helpers'
 import { ButtonProps } from './types'
 import s from './styles'
 
 const Button: FC<ButtonProps> = ({
-  children: text, large, loading, primary,
-  rounded, style, onClick = noop, ...rest
+  children, large, loading, style,
+  onClick = noop, ...rest
 }) => {
   function handleClick() {
     if (loading) return
@@ -15,20 +16,17 @@ const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <button
+    <BaseButton
       css={[
-        s.btn,
         large && s.large,
-        primary ? s.primary : s.default,
-        rounded && s.rounded,
         style,
       ]}
       onClick={handleClick}
       {...rest}
     >
-      {loading ? <Loader small /> : text}
-    </button>
+      {loading ? <Loader small /> : children}
+    </BaseButton>
   )
 }
 
-export default memo(Button)
+export default Button

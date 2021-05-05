@@ -1,2 +1,5 @@
+export { BaseButton } from './BaseButton'
+export type { BaseButtonProps } from './BaseButton'
 export { Button } from './Button'
 export { IW } from './InteractiveWrapper'
+export { RoundedButton } from './RoundedButton'

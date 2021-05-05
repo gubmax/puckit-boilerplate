@@ -1,11 +1,6 @@
-import { ButtonHTMLAttributes } from 'react'
+import { BaseButtonProps } from 'src/components/inputs'
 
-import { StyledProps } from 'src/types'
-
-export interface ButtonProps extends StyledProps, Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'style'> {
+export interface ButtonProps extends BaseButtonProps {
   large?: boolean,
   loading?: boolean,
-  primary?: boolean,
-  rounded?: boolean,
-  onClick?: () => void,
 }
