@@ -13,15 +13,15 @@ export async function httpRequest<R extends HttpRequestResponse, B extends HttpR
     const res = await fetch(input, { ...init, body: JSON.stringify(body) })
     const data = await res.json() as R
     return data
-  } catch (error) {
-    const arg: ErrorImplProps = {}
+  } catch (error: unknown) {
+    const errorProps: ErrorImplProps = {}
 
     if (typeof error === 'string') {
-      arg.message = error
+      errorProps.message = error
     } else if (error instanceof Error) {
-      arg.message = error.message
+      errorProps.message = error.message
     }
 
-    throw new CriticalError(arg)
+    throw new CriticalError(errorProps)
   }
 }

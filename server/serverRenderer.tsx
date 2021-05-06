@@ -1,4 +1,3 @@
-import React from 'react'
 import { MemoryRouter } from 'react-router'
 import { matchPath } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'

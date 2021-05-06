@@ -7,10 +7,7 @@ const BaseButton: FC<BaseButtonProps> = ({
   children, primary, style, ...rest
 }) => {
   return (
-    <button
-      css={[s.btn, primary ? s.primary : s.default, style]}
-      {...rest}
-    >
+    <button css={[s.btn, primary ? s.primary : s.default, style]} {...rest}>
       {children}
     </button>
   )

@@ -7,4 +7,3 @@ const RoundedButton: FC<BaseButtonProps> = ({ style, ...props }) =>
   <BaseButton css={[style, s.rounded]} {...props} />
 
 export default RoundedButton
-
