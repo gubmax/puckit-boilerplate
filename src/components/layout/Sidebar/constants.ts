@@ -1,4 +1,4 @@
-import { PageRoutes } from 'src/services/requests'
+import { PageRoutes } from 'src/services/http'
 
 export const ROUTES: Array<{to: PageRoutes, text: string}> = [
   { to: PageRoutes.ROOT, text: 'About' },

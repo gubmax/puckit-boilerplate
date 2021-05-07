@@ -1,16 +1,16 @@
 import { RequestActions } from './constants'
 import { RequestReducer } from './types'
 
-export const requestReducer: RequestReducer = (state, { type, payload }) => {
-  switch (type) {
+export const requestReducer: RequestReducer = (state, action) => {
+  switch (action.type) {
     case RequestActions.START:
       return { loading: true }
 
     case RequestActions.SUCCESS:
-      return { data: payload, loading: false }
+      return { data: action.payload, loading: false }
 
     case RequestActions.FAILURE:
-      return { error: payload as Error, loading: false }
+      return { error: action.payload as Error, loading: false }
       
     default:
       return { ...state }

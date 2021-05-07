@@ -1,4 +1,4 @@
 export { HttpRequestMethods } from './constants'
 export { httpRequest } from './httpRequest'
-export { HttpRequestImpl } from './HttpRequestImpl'
-export type { HttpRequestInit } from './types'
+export { QueryImpl } from './QueryImpl'
+export type { HttpRequestInit, HttpRequestResponse, HttpRequestBody  } from './types'

@@ -1,0 +1,1 @@
+export { QueryModel } from './QueryModel'

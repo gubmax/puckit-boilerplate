@@ -4,7 +4,7 @@ import {
   CodeSplittingPage, ErrorHandlingPage, FormsPage, HomePage,
   ModalAndPopupPage, NetworkPage, SsrPage, StateManagmentPage,
 } from 'src/components/pages'
-import { PageRoutes } from 'src/services/requests'
+import { PageRoutes } from 'src/services/http'
 
 export const ROUTES: PartialRouteObject[] = [
   { path: PageRoutes.ROOT, element: <HomePage /> },

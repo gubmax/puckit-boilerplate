@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server'
 
 import { App } from 'src/components/layout'
 import { ServerSideProps } from 'src/components/services'
-import { PageRoutes } from 'src/services/requests'
+import { PageRoutes } from 'src/services/http'
 import htmlTemplate from '../dist/index.html'
 
 export async function serverRenderer(url: string): Promise<string> {
