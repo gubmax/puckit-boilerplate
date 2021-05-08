@@ -4,9 +4,9 @@ import { Wrapper } from 'src/components/surfaces'
 import { ListProps } from './types'
 import s from './styles'
 
-const List: FC<ListProps> = ({ className = '', style, tag, children }) => {
+const List: FC<ListProps> = ({ className = '', style, as, children }) => {
   return (
-    <Wrapper className={className} css={style} tag={tag} noPadding>
+    <Wrapper className={className} css={style} as={as} noPadding>
       {Children.map(children, (child, index) => (
         <>
           {!!index && <hr css={s.separator} />}

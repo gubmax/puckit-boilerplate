@@ -5,7 +5,7 @@ import { WrapperProps } from './types'
 import s from './styles'
 
 const Wrapper: FC<WrapperProps> = ({
-  tag: Tag = 'div', className = '', style, children,
+  as: Tag = 'div', className = '', style, children,
   noPadding, onClick = noop, ...rest
 }) => {
   return (

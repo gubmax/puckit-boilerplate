@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
-import { StyledProps, TagProp } from 'src/types'
+import { StyledProps, AsProp } from 'src/types'
 
-export interface ListProps extends StyledProps, TagProp {
+export interface ListProps extends StyledProps, AsProp {
   children: ReactElement[],
 }
