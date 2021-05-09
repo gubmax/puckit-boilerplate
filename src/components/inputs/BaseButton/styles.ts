@@ -12,11 +12,8 @@ const styles = {
     border-width: 0;
     cursor: pointer;
     font-family: inherit;
-    font-size: var(--fs-accent);
     font-weight: 500;
     height: 3rem;
-    letter-spacing: 1px;
-    line-height: 1rem;
     min-width: 10rem;
     outline: none;
     padding: 0 var(--space-primary);

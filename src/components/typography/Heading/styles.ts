@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 
 const styles = {
   h1: css`
-    margin-bottom: var(--space-secondary);
+    margin-bottom: var(--space-primary);
     font-size: var(--fs-h1);
     font-weight: bold;
   `,

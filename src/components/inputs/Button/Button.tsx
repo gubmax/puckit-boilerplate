@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <BaseButton css={[large && s.large, style]} onClick={handleClick} {...rest}>
+    <BaseButton css={[s.wrapper, large && s.large, style]} onClick={handleClick} {...rest}>
       {loading ? <Loader small /> : children}
     </BaseButton>
   )
