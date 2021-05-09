@@ -1,4 +1,5 @@
 export { useRequest } from './useRequest'
+export { useInit } from './useInit'
 export { useHistory } from './useHistory'
 export { useQueryLoader } from './useQueryLoader'
 export { useServerSideProps } from './useServerSideProps'
