@@ -1,6 +1,5 @@
-import { HttpRequestMethods } from 'src/modules/http'
+import { ApiRoutes, HttpRequestMethods } from 'src/infra/http'
 import { QueryModel } from 'src/models'
-import { ApiRoutes } from './constants'
 
 export interface SsrMessageResponse {
   text: string;

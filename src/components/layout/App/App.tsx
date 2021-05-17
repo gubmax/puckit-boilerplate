@@ -1,8 +1,8 @@
 import { FC, StrictMode } from 'react'
 import { Global } from '@emotion/react'
 
-import { ServerSidePropsContext } from 'src/components/services'
 import { Main } from 'src/components/layout'
+import { ServerSidePropsContext } from 'src/contexts'
 import { AppProps } from './types'
 import s from './styles'
 

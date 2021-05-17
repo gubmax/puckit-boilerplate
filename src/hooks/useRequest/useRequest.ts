@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useReducer, useRef } from 'react'
 
-import { QueryImpl } from 'src/modules/http'
 import { noop } from 'src/helpers'
+import { QueryImpl } from 'src/utils/queries'
 import { INITIAL_STATE, RequestActions } from './constants'
 import { requestReducer } from './helpers'
 import { RequestState, Request, RequestReducer } from './types'

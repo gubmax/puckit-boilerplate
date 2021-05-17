@@ -1,7 +1,8 @@
 import { render, hydrate } from 'react-dom'
 
 import { App } from 'src/components/layout'
-import { BrowserRouter, ServerSideProps } from 'src/components/services'
+import { BrowserRouter } from 'src/components/services'
+import { ServerSideProps } from 'src/contexts'
 
 let serverSideProps: ServerSideProps = {}
 

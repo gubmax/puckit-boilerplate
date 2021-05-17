@@ -1,5 +1,6 @@
-import { httpRequest } from './httpRequest'
-import { HttpRequestBody, HttpRequestInit, HttpRequestResponse } from './types'
+import {
+  HttpRequestResponse, HttpRequestBody, HttpRequestInit, httpRequest,
+} from 'src/infra/http'
 
 enum Statuses {
   IDLE = 'idle',

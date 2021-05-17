@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 import { Action } from 'history'
 
-import { QueryImpl } from 'src/modules/http'
+import { QueryImpl } from 'src/utils/queries'
 import { useHistory } from '.'
 
 export function useQueryLoader<T extends QueryImpl<unknown, unknown>>(

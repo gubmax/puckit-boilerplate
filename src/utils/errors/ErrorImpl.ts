@@ -1,4 +1,7 @@
-import { ErrorImplProps } from './types'
+export interface ErrorImplProps {
+  title?: string;
+  message?: string;
+}
 
 export abstract class ErrorImpl extends Error {
   abstract readonly type: string | number;

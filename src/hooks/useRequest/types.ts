@@ -1,6 +1,6 @@
 import { Reducer } from 'react'
 
-import { QueryImpl } from 'src/modules/http'
+import { QueryImpl } from 'src/utils/queries'
 import { RequestActions } from './constants'
 
 type HttpReqSend<T extends QueryImpl> = T['send']

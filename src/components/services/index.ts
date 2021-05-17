@@ -1,3 +1,2 @@
-export { default as BrowserRouter, HistoryContext } from './BrowserRouter'
-export { default as ServerSidePropsContext } from './ServerSidePropsContext'
-export type { ServerSideProps } from './ServerSidePropsContext'
+export { default as BrowserRouter } from './BrowserRouter'
+export { default as ErrorBoundary } from './ErrorBoundary'

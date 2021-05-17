@@ -1,4 +1,4 @@
-import { CriticalError } from 'src/services/errors'
+import { CriticalError } from 'src/utils/errors'
 import { HttpRequestBody, HttpRequestInit, HttpRequestResponse } from './types'
 
 /**

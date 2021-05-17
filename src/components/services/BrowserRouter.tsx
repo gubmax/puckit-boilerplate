@@ -1,8 +1,8 @@
-import { createContext, useRef, useState, useLayoutEffect, FC } from 'react'
+import { useRef, useState, useLayoutEffect, FC } from 'react'
 import { Router } from 'react-router-dom'
-import { BrowserHistory, createBrowserHistory } from 'history'
+import { createBrowserHistory } from 'history'
 
-export const HistoryContext = createContext<BrowserHistory | Record<string, never>>({})
+import { HistoryContext } from 'src/contexts'
 
 const BrowserRouter: FC = ({ children }) => {
   const { current: history } = useRef(createBrowserHistory({ window }))

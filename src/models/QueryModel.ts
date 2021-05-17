@@ -1,6 +1,7 @@
 import { action, makeObservable, observable } from 'mobx'
 
-import { HttpRequestResponse, HttpRequestBody, QueryImpl } from 'src/modules/http'
+import { HttpRequestResponse, HttpRequestBody } from 'src/infra/http'
+import { QueryImpl } from 'src/utils/queries'
 
 export abstract class QueryModel<
   R extends HttpRequestResponse = HttpRequestResponse,

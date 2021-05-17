@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { observer } from 'mobx-react-lite'
 
-import { httpRequest } from 'src/modules/http'
-import { SsrMessageInit, SsrMessageQuery, SsrMessageResponse } from 'src/services/http'
+import { httpRequest } from 'src/infra/http'
 import { useServerSideProps, useQueryLoader } from 'src/hooks'
 import { H1 } from 'src/components/typography'
 import { Loader } from 'src/components/elements'
+import { SsrMessageResponse, SsrMessageInit, SsrMessageQuery } from 'src/utils/queries'
 
 import { SsrPageServerSideProps } from './types'
 
