@@ -1,14 +1,18 @@
-import { ExtendedErrorTypes } from './constants'
+import { ErrorLevels } from 'src/components/services'
+import { ExtendedErrors } from './constants'
 import { ErrorImpl } from './ErrorImpl'
 
 export class Warning extends ErrorImpl {
-  type = ExtendedErrorTypes.WARNING
+  type = ExtendedErrors.WARNING
+  level = ErrorLevels.WARNING
 }
 
-export class Exception extends ErrorImpl {
-  type = ExtendedErrorTypes.EXCEPTION
+export class SevereError extends ErrorImpl {
+  type = ExtendedErrors.SEVERE
+  level = ErrorLevels.SEVERE
 }
 
-export class CriticalError extends ErrorImpl {
-  type = ExtendedErrorTypes.CRITICAL
+export class FatalError extends ErrorImpl {
+  type = ExtendedErrors.FATAL
+  level = ErrorLevels.FATAL
 }

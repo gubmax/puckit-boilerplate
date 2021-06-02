@@ -1,4 +1,4 @@
-import { CriticalError } from 'src/utils/errors'
+import { FatalError } from 'src/utils/errors'
 import { HttpRequestBody, HttpRequestInit, HttpRequestResponse } from './types'
 
 /**
@@ -13,7 +13,7 @@ export async function httpRequest<
     const data = await res.json() as R
     return data
   } catch (error: unknown) {
-    throw new CriticalError({
+    throw new FatalError({
       message: error instanceof Error ? error.message : ''
     })
   }

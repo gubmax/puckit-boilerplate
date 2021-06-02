@@ -1,2 +1,3 @@
-export { Warning, Exception, CriticalError } from './errors'
-export { ExtendedErrorTypes } from './constants'
+export { Warning, SevereError, FatalError } from './errors'
+export { ErrorImpl } from './ErrorImpl'
+export { ExtendedErrors } from './constants'

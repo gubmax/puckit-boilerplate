@@ -5,6 +5,7 @@ export interface ErrorImplProps {
 
 export abstract class ErrorImpl extends Error {
   abstract readonly type: string | number;
+  abstract readonly level: number;
   readonly title?: string;
 
   constructor({ title, message = '' }: ErrorImplProps = {}) {

@@ -1,5 +1,5 @@
-export enum ExtendedErrorTypes {
+export enum ExtendedErrors {
   WARNING,
-  EXCEPTION,
-  CRITICAL,
+  SEVERE,
+  FATAL,
 }
